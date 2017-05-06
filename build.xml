@@ -21,6 +21,18 @@
         deployRoot="src"/>
     </target>
 
+    <target name="deploySIT">
+      <sf:deploy username="${sf.sit.username}"
+        password="${sf.sit.password}"
+        serverurl="${sf.sit.serverurl}"
+        runAllTests="false"
+        logType="Detail"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="src"/>
+    </target>
+
     <target name="validate">
       <sf:deploy username="${sf.username}"
         password="${sf.password}"
